@@ -38,7 +38,12 @@ module.exports = {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', 'nuxt-webfontloader'],
+  webfontloader: {
+    google: {
+      families: ['Noto+Serif+JP:wght@300;400']
+    }
+  },
   /*
    ** Build configuration
    */
