@@ -1,6 +1,8 @@
 <template>
   <div class="Header">
-    <page-header>{{ headerItem.title }}</page-header>
+    <page-header :headercontent="headerItem.content">
+      {{ headerItem.title }}
+    </page-header>
   </div>
 </template>
 
@@ -15,7 +17,8 @@ export default {
   data() {
     const data = {
       headerItem: {
-        title: 'TECHNOLOGY×ART2019 WORKS'
+        title: 'TECHNOLOGY×ART2019 WORKS',
+        content: ['2018', '2017', '2016']
       }
     }
 
@@ -25,9 +28,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/*
 .Header {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
 }
+   */
 </style>
