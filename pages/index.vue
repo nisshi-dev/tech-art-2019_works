@@ -1,7 +1,7 @@
 <template>
   <div class="Header">
-    <page-header :headercontent="headerItem.content">
-      {{ headerItem.title }}
+    <page-header :header-item="headerItem">
+      {{ title }}
     </page-header>
   </div>
 </template>
@@ -16,10 +16,21 @@ export default {
   },
   data() {
     const data = {
-      headerItem: {
-        title: 'TECHNOLOGY×ART2019 WORKS',
-        content: ['2018', '2017', '2016']
-      }
+      title: 'TECHNOLOGY×ART2019 WORKS',
+      headerItem: [
+        {
+          content: '2018',
+          url: 'http://www.mono.eng.yamaguchi-u.ac.jp/Tech_Art/about/index.html'
+        },
+        {
+          content: '2017',
+          url: 'http://www.mono.eng.yamaguchi-u.ac.jp/garden/'
+        },
+        {
+          content: '2016',
+          url: 'http://www.mono.eng.yamaguchi-u.ac.jp/garden/index2.html'
+        }
+      ]
     }
 
     return data
