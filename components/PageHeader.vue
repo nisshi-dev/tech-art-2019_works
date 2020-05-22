@@ -5,11 +5,11 @@
     </h2>
     <!--<div class="header-menu Noto-300">-->
     <li
-      v-for="item in headercontent"
+      v-for="item in headerItem"
       :key="item.message"
       class="header-navlink Noto-300"
     >
-      <p>{{ item }}</p>
+      <a :href="item.url">{{ item.content }}</a>
     </li>
     <!--</div>-->
   </div>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  props: ['headertitle', 'headercontent']
+  props: ['title', 'headerItem']
 }
 </script>
 
