@@ -4,19 +4,23 @@
       {{ title }}
     </page-header>
     <top-content />
+    <page-footer />
   </div>
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader.vue'
 import TopContent from '~/components/TopContent.vue'
+import PageFooter from '~/components/PageFooter.vue'
 
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
     PageHeader,
     // eslint-disable-next-line vue/no-unused-components
-    TopContent
+    TopContent,
+    // eslint-disable-next-line vue/no-unused-components
+    PageFooter
   },
   data() {
     const data = {
