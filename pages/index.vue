@@ -3,16 +3,20 @@
     <page-header :header-item="headerItem">
       {{ title }}
     </page-header>
+    <top-content />
   </div>
 </template>
 
 <script>
 import PageHeader from '~/components/PageHeader.vue'
+import TopContent from '~/components/TopContent.vue'
 
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    PageHeader
+    PageHeader,
+    // eslint-disable-next-line vue/no-unused-components
+    TopContent
   },
   data() {
     const data = {
