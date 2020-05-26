@@ -11,7 +11,7 @@
       Hiroki / Maeda Ryo / Kubota Momoka / Kishida Shinji / Komura Shunsuke /
       Tanabe Reira / Itamura Mizuki / Suzuki Ryosuke / Kevin Jay Singh /
       Kanazawa Ryo / Sato Ryota / Takata Jumpei / Nakano Tomohiro / Yoshikawa
-      Terutaka <br />
+      Teru18taka <br />
       <b>General Support: </b>UBE Tokiwa Park<br />
       <b>Stuff Supportors: </b>（敬称略）Marumo Yuji / Kumagai Mitsuyuki /
       Hayakawa Yoshiaki / Shinozaki Keiji / Mitsui Kazuhiko / Fujita Tadao /
@@ -21,6 +21,10 @@
       ダイサンプロパン / 田辺仏具展 / 小川蜜カス本舗 / うべ未来100プロジェクト /
       三和企業 / 福島建設 / 金子小児科 <br />
       <b>Web: </b>Horikawa Yuki ※Out of order Presented by Ube City
+    </p>
+    <p class="copyright">
+      Copyright ©️2020 Center for Design and Product Innovation All Rights
+      Reserved.
     </p>
   </div>
 </template>
@@ -40,5 +44,11 @@
   margin: 1.5rem;
   color: #dddddd;
   line-height: 2rem;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: #dddddd;
 }
 </style>
