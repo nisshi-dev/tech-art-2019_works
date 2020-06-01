@@ -1,6 +1,7 @@
 <template>
   <div class="footer">
     <p class="credit">
+      <br /><br />
       Credit Produced by the student team of Creative Engineering
       Practice（ものづくり創成プロジェクト）, YAMAGUCHI University, and
       challenge lecture’Technology x Art’,YAMAGUCHI University, Ube Kosen,
