@@ -3,8 +3,8 @@
     <page-header :header-item="headerItem">
       {{ title }}
     </page-header>
-    <top-content />
-    <page-footer />
+    <!-- <top-content />
+    <page-footer /> -->
   </div>
 </template>
 
