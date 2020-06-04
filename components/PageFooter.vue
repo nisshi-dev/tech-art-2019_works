@@ -3,10 +3,10 @@
     <div class="credit">
       <h4>Credit</h4>
       <p>
-        Credit Produced by the student team of Creative Engineering
-        Practice（ものづくり創成プロジェクト）, YAMAGUCHI University, and
-        challenge lecture’Technology x Art’,YAMAGUCHI University, Ube Kosen,
-        UBE<br />
+        Produced by the student team of Creative Engineering
+        Practice（ものづくり創成プロジェクト）, and challenge lecture’Technology
+        x Art’, YAMAGUCHI University, National Institute of Technology, Ube
+        College, UBE City<br />
         <b>City Supervisor: </b>Prof. Koshiba Mamiko Ph.D.<br />
         <b>Associate Professor Creators: </b>Horikawa Yuki / Yamaguchi Marina /
         Mishima Seitaro / Watanabe Joichiro / Hua Zhudi / Fujita Koji / Kawasaki
@@ -15,7 +15,7 @@
         Kanazawa Ryo / Sato Ryota / Takata Jumpei / Nakano Tomohiro / Yoshikawa
         Teru18taka <br />
         <b>General Support: </b>UBE Tokiwa Park<br />
-        <b>Web: </b>Horikawa Yuki ※Out of order Presented by Ube City
+        <b>Web: </b>Nishida Yoshikatsu ※Out of order Presented by Ube City
       </p>
     </div>
     <div class="presedted">
@@ -48,38 +48,51 @@
 <style lang="scss" scoped>
 .footer {
   display: flex;
-  //align-items: flex-end;
-  flex-wrap: wrap;
+  flex-wrap: wrap; // 折返し有効
   width: auto;
-  border: 1px solid white;
+  //border: 1px solid white;
   color: #dddddd;
-  justify-content: center;
+  padding: 1rem;
+  h4 {
+    font-size: 14px;
+    line-height: 30px;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 12px;
+    line-height: 22px;
+    //border: 1px solid white;
+    margin-left: 0.8vw;
+  }
 }
 
 .credit {
-  border: 1px solid white;
+  //border: 1px solid white;
+  border-right: 1px solid white;
   width: calc(100% / 3);
-  //margin: 1.5rem;
-  //color: #dddddd;
-  //line-height: 2rem;
+  padding-right: 0.5vw;
 }
 
 .presedted {
-  border: 1px solid white;
+  //border: 1px solid white;
+  border-right: 1px solid white;
   width: calc(100% / 3);
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
 }
 
 .share {
-  border: 1px solid white;
+  //border: 1px solid white;
   width: calc(100% / 3);
+  padding-left: 0.5vw;
 }
 
 .copyright {
-  //display: block;
-  border: 1px solid white;
+  //border: 1px solid white;
+  border-top: 1px solid white;
   width: 100%;
-  //display: flex;
-  //justify-content: center;
-  //color: #dddddd;
+  display: flex; // 親要素とする
+  justify-content: center; // 水平中央揃え
+  padding-top: 0.5vh;
 }
 </style>
