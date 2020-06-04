@@ -39,12 +39,15 @@ export default {
   margin-right: auto; // 次の要素を右寄せ
   height: 4vh;
   //justify-content: center;
+  //margin-top: auto;
+  //align-items: center;
 }
 
 .header-menu {
   color: gray;
   border: 1px solid white;
-  height: 4vh;
+  //height: 4vh;
+  margin-top: auto; // 下寄せ
   ul {
     display: flex; // listを横並びにする
     list-style-type: none; // リストの接頭部を削除
@@ -52,6 +55,13 @@ export default {
   }
   .header-navlink {
     border: solid white;
+    padding: 0.4rem 1.2rem;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .header-navlink {
+    color: white;
   }
 }
 
