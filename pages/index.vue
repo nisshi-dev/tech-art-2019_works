@@ -4,7 +4,7 @@
       {{ title }}
     </page-header>
     <top-content />
-    <!-- <page-footer /> -->
+    <page-footer />
   </div>
 </template>
 
