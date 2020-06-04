@@ -43,6 +43,13 @@
           ><i class="fa fa-google-plus"></i><span>Google+</span></a
         >
       </div>
+
+      <div class="code">
+        <h4>Code</h4>
+        <a href="https://github.com/nishidayoshikatsu/tech-art-2019_works">
+          <img src="~/static/github.png" />
+        </a>
+      </div>
     </div>
     <div class="copyright">
       <small>
@@ -92,9 +99,12 @@
 }
 
 .share {
-  //border: 1px solid white;
+  border: 1px solid white;
   width: calc(100% / 3);
   padding-left: 0.5vw;
+  .code img {
+    margin: 0.5rem;
+  }
   .social {
     @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css); // icon
     margin: 0.3vw;
