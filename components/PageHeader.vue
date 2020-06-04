@@ -38,6 +38,8 @@ export default {
   border: 1px solid white;
   margin-right: auto; // 次の要素を右寄せ
   height: 4vh;
+  margin-top: 1vh;
+  margin-left: 1vw;
   //justify-content: center;
   //margin-top: auto;
   //align-items: center;
