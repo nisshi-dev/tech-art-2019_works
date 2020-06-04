@@ -3,15 +3,17 @@
     <h2 class="pageTitle Noto-400i">
       <slot />
     </h2>
-    <!--<div class="header-menu Noto-300">-->
-    <li
-      v-for="item in headerItem"
-      :key="item.message"
-      class="header-navlink Noto-300"
-    >
-      <a :href="item.url">{{ item.content }}</a>
-    </li>
-    <!--</div>-->
+    <div class="header-menu Noto-300">
+      <ul>
+        <li
+          v-for="item in headerItem"
+          :key="item.message"
+          class="header-navlink Noto-300"
+        >
+          <a :href="item.url">{{ item.content }}</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -23,29 +25,48 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  /*display: flex;*/
-  align-items: flex-end;
-  flex-wrap: wrap;
+  display: flex; // flexboxの指定
+  border: 1px solid white;
+  height: 8vh; // headerの高さを指定
+  width: auto;
+  //flex-wrap: wrap;
+  //justify-content: center;
 }
 
 .pageTitle {
   color: gray;
-  display: flex;
-  align-items: center;
-  float: left;
-  margin: 10px 20px;
+  border: 1px solid white;
+  margin-right: auto; // 次の要素を右寄せ
+  height: 4vh;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  //justify-content: center;
+  //margin-top: auto;
+  //align-items: center;
 }
 
-.header-navlink {
+.header-menu {
   color: gray;
-  float: right;
-  flex-direction: row;
-  justify-content: flex-end;
-  list-style-type: none;
-  align-items: flex-end;
-  padding: 5px;
-  margin: 20px 10px 5px;
+  border: 1px solid white;
+  //height: 4vh;
+  margin-top: auto; // 下寄せ
+  ul {
+    display: flex; // listを横並びにする
+    list-style-type: none; // リストの接頭部を削除
+    padding-left: 0;
+  }
+  .header-navlink {
+    border: solid white;
+    padding: 0.4rem 1.2rem;
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .header-navlink {
+    color: white;
+  }
 }
+
 .Noto-300 {
   font-family: 'Noto Serif JP', serif;
   font-width: 300;
