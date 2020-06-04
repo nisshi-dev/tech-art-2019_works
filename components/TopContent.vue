@@ -25,7 +25,7 @@
   //float: left; // 大事
   //align-items: flex-end;
   //flex-wrap: wrap;
-  //text-align: center;
+  text-align: center; // 文字を中央揃えにする
   justify-content: center; // 画像を水平方向にセンタリング
   position: relative; // 相対配置
   //margin: 0.8rem;
