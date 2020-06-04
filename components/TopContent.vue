@@ -48,7 +48,7 @@
   margin: 0;
   padding: 0;
   color: #dddddd;
-  font-size: 1.5rem;
-  line-height: 4rem;
+  font-size: 1.2vw;
+  line-height: 2.5vw;
 }
 </style>
