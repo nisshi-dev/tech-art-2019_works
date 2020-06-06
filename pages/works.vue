@@ -9,7 +9,7 @@
 
 <script>
 import PageHeader from '~/components/PageHeader.vue'
-import WorkContent from '~/components/WorkContent.vue'
+import WorkContent from '~/components/works/WorkContent.vue'
 
 export default {
   components: {

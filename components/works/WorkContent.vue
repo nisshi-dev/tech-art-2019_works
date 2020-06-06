@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BreadCrumb from '~/components/BreadCrumb.vue'
+import BreadCrumb from '~/components/works/BreadCrumb.vue'
 
 export default {
   components: {
