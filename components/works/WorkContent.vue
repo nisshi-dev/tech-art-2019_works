@@ -14,6 +14,7 @@
           <h4>―親子―</h4>
           <img src="~/static/works/KOUSHI_HOUSE.jpg" />
         </li>
+        <br />
         <li class="light-cube w-img">
           <h3>光る立体</h3>
           <h4>―卓上の星団―</h4>
@@ -77,7 +78,7 @@ export default {
 
 .w-img img {
   height: 35vh;
-  //width: 30vw;
+  width: 28vw;
 }
 
 .h-img img {
@@ -86,7 +87,8 @@ export default {
 }
 
 .content {
-  border: 1px solid white;
+  //border: 1px solid white;
+  width: 70vw;
   ul {
     display: flex; // listを横並びにする
     list-style-type: none; // リストの接頭部を削除
@@ -96,12 +98,16 @@ export default {
     flex-wrap: wrap; // 折返し有効
   }
   li {
-    border: 1px solid white;
+    //border: 1px solid white;
     display: flex;
     flex-direction: column;
     align-items: center; // 水平中央揃え
+    margin: 20px;
+    border-radius: 20px; // 角を丸める
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
     img {
       margin-top: 10px;
+      border-radius: 20px; // 角を丸める
     }
   }
   li :link {
