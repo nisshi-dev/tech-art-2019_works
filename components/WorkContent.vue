@@ -1,5 +1,6 @@
 <template>
   <div class="work-content">
+    <bread-crumb />
     <h2>作品集</h2>
     <div class="robot-village">
       <img src="~/static/works/KOUSHI_HOUSE.jpg" />
@@ -15,6 +16,17 @@
     </div>
   </div>
 </template>
+
+<script>
+import BreadCrumb from '~/components/BreadCrumb.vue'
+
+export default {
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    BreadCrumb
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .work-content {
