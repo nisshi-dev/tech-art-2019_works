@@ -24,11 +24,15 @@
           -->
         </MyModal>
 
-        <li class="koushi-house w-img">
+        <li class="koushi-house w-img" @click="openModal">
           <h3>KOUSHI HOUSE</h3>
           <h4>―親子―</h4>
           <img src="~/static/works/KOUSHI_HOUSE.jpg" />
         </li>
+
+        <MyModal v-if="modal" :works-info="worksInfo[1]" @close="closeModal">
+        </MyModal>
+
         <br />
         <li class="light-cube w-img">
           <h3>光る立体</h3>
@@ -93,8 +97,17 @@ export default {
         },
         {
           title: 'KOUSHI HOUSE',
-          subtitle: 'ースマートフォンで実社会づくりー',
-          movie: '~/static/works/KOUSHI_HOUSE.webm'
+          subtitle: '―親子―',
+          movie: '~/static/works/KOUSHI_HOUSE.webm',
+          desc: [
+            'フィトンチッド。',
+            'それは樹木が発散する化学物質であり人間に癒やしや安らぎを与える。',
+            'この作品は、廃材である木材を使っており、それをフレームにし不規則に並べて積み重ねたものがベースになっている。',
+            'そのフレームは幅が広いので子供も乗れ、階段状になるように設計した。',
+            'また防水性のLEDテープを貼り付け、制御することにより視覚的な変化も取り入れた。',
+            'また天井にはネットを覆わせるとともにライトを巻き付け星空を想起させる。'
+          ],
+          producer: '　　    山口端奈、Hua Zhudi'
         }
       ]
     }
