@@ -55,11 +55,22 @@
         </MyModal>
 
         <br />
-        <li class="light-cube w-img">
+        <li class="light-cube w-img" @click="openModal2">
           <h3>光る立体</h3>
           <h4>―卓上の星団―</h4>
           <img src="~/static/works/light_cube.jpg" />
         </li>
+
+        <MyModal v-if="modal2" :works-info="worksInfo[2]" @close="closeModal2">
+          <video controls width="600">
+            <source src="~/static/works/light_cube.webm" type="video/webm" />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/light_cube.jpg" />
+            <img src="~/static/works/light_cube2.jpg" />
+          </template>
+        </MyModal>
+
         <li class="lucky-chance w-img">
           <h3>ラッキーチャンス！！</h3>
           <h4>―ITの神様のお告げ―</h4>
@@ -105,6 +116,7 @@ export default {
     const data = {
       modal0: false,
       modal1: false,
+      modal2: false,
       worksInfo: [
         {
           title: 'ロボット村',
@@ -130,6 +142,15 @@ export default {
             'また天井にはネットを覆わせるとともにライトを巻き付け星空を想起させる。'
           ],
           producer: '　　    山口端奈、Hua Zhudi'
+        },
+        {
+          title: '光る立体',
+          subtitle: '―卓上の星団―',
+          movie: '~/static/works/light_cube.webm',
+          desc: [
+            'LEDテープを格子状に貼りめぐらせることで美しい光の立体を実現した。'
+          ],
+          producer: '　　    升谷光貴'
         }
       ]
     }
@@ -148,6 +169,12 @@ export default {
     },
     closeModal1() {
       this.modal1 = false
+    },
+    openModal2() {
+      this.modal2 = true
+    },
+    closeModal2() {
+      this.modal2 = false
     }
   }
 }
