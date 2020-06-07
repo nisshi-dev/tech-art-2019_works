@@ -3,7 +3,7 @@
     <div class="modal modal-overlay" @click.self="$emit('close')">
       <div class="modal-window">
         <div class="modal-header">
-          <p>×</p>
+          <p @click="$emit('close')">×</p>
         </div>
         <!--
         <div class="modal-content">
@@ -86,6 +86,7 @@
     padding: 5px 10px;
     background-color: #222222;
     color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); // 影の追加
   }
 }
 </style>
