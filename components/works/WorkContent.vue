@@ -10,7 +10,7 @@
           <img src="~/static/works/robot_village.jpg" />
         </li>
 
-        <MyModal v-if="modal" @close="closeModal" :works-info="worksInfo[0]">
+        <MyModal v-if="modal" :works-info="worksInfo[0]" @close="closeModal">
           <!--
           <template slot="modal-title">
             <h3>ロボット村</h3>
@@ -84,7 +84,12 @@ export default {
           title: 'ロボット村',
           subtitle: 'ースマートフォンで実社会づくりー',
           movie: '~/static/works/robot_village.webm',
-          desc: '3Dプリンタで制作したロボット計6台を制作し、展示を行った。'
+          desc: [
+            '3Dプリンタでロボットを計6台制作し、展示を行った。',
+            '一部のロボットはスマートフォンでQRコードを読み取ることでロボットの操作体験ができるようにした。',
+            'また、上部にプロジェクターを設置し、簡単なプロジェクションマッピングを行った。'
+          ],
+          producer: '　　    西田吉克、升谷光貴、一氏良仁、小川拓馬、富田大喜'
         },
         {
           title: 'KOUSHI HOUSE',

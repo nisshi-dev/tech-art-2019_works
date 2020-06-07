@@ -7,8 +7,8 @@
         </div>
         <div class="modal-content">
           <div class="title">
-            <h3>{{ worksInfo.title }}</h3>
-            <h4>{{ worksInfo.subtitle }}</h4>
+            <h1>{{ worksInfo.title }}</h1>
+            <h2>{{ worksInfo.subtitle }}</h2>
           </div>
           <div class="content">
             <div class="video">
@@ -28,7 +28,25 @@
             <div class="desc">
               <h4>説明</h4>
               <br />
-              <p>{{ worksInfo.desc }}</p>
+              <ul>
+                <li v-for="item in worksInfo.desc" :key="item">
+                  <p>{{ item }}</p>
+                </li>
+              </ul>
+              <br />
+              <h4>製作者</h4>
+              <br />
+              <p>{{ worksInfo.producer }}</p>
+            </div>
+          </div>
+          <div class="gallery">
+            <h3>＜ギャラリー＞</h3>
+            <div class="w-img">
+              <img src="~/static/works/robot_village.jpg" />
+              <img src="~/static/works/robot_village2.jpg" />
+            </div>
+            <div class="h-img">
+              <img src="~/static/works/robot_village_poster.jpg" />
             </div>
           </div>
         </div>
@@ -104,7 +122,8 @@ export default {
 .modal-window {
   //border: 5px solid red;
   width: 70%;
-  height: 60%;
+  height: 80%;
+  overflow-y: scroll; // モーダルウィンドウをスクロールできるようにした
 }
 
 .modal-header {
@@ -138,15 +157,43 @@ export default {
   .content {
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    //border: 1px solid black;
+    border-bottom: 1px solid gray;
+    padding-bottom: 20px;
     margin: 20px;
     .video {
       //height: 40vh;
       //width: 30vw;
+      padding-right: 20px;
     }
     .desc {
       display: flex;
       flex-direction: column;
+      li {
+        list-style-type: none; // リストの接頭部を削除
+      }
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    //border: 1px solid black;
+    justify-content: center;
+    align-items: center; // 水平中央揃え
+    h3 {
+      margin-bottom: 20px;
+    }
+    img {
+      border-radius: 10px;
+      margin: 10px;
+    }
+    .w-img img {
+      height: 35vh;
+      width: 28vw;
+    }
+    .h-img img {
+      width: 15vw;
+      height: 50vh;
     }
   }
 }
