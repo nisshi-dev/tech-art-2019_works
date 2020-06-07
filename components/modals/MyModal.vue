@@ -5,6 +5,33 @@
         <div class="modal-header">
           <p @click="$emit('close')">×</p>
         </div>
+        <div class="modal-content">
+          <div class="title">
+            <h3>{{ worksInfo.title }}</h3>
+            <h4>{{ worksInfo.subtitle }}</h4>
+          </div>
+          <div class="content">
+            <div class="video">
+              <!--
+            <video controls width="600">
+              <source :src="worksInfo.movie" type="video/webm" />
+            </video>
+            <p>{{ worksInfo.movie }}</p>
+            -->
+              <video controls width="600">
+                <source
+                  src="~/static/works/robot_village.webm"
+                  type="video/webm"
+                />
+              </video>
+            </div>
+            <div class="desc">
+              <h4>説明</h4>
+              <br />
+              <p>{{ worksInfo.desc }}</p>
+            </div>
+          </div>
+        </div>
         <!--
         <div class="modal-content">
           <slot />
@@ -19,6 +46,12 @@
     </div>
   </transition>
 </template>
+
+<script>
+export default {
+  props: ['worksInfo']
+}
+</script>
 
 <style lang="scss" scoped>
 .modal {
@@ -76,7 +109,7 @@
 
 .modal-header {
   //border: 1px solid black;
-  //color: black;
+  color: #222222;
   display: flex;
   align-self: flex-start; // 左寄せ
   font-size: 30px;
@@ -87,6 +120,32 @@
     background-color: #222222;
     color: white;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); // 影の追加
+  }
+}
+
+.modal-content {
+  //border: 1px solid black;
+  color: #222222;
+  .title {
+    //border: 1px solid black;
+    display: flex;
+    flex-direction: column; // 縦に整列
+    justify-content: center;
+    align-items: center; // 水平中央揃え
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 20px;
+    .video {
+      //height: 40vh;
+      //width: 30vw;
+    }
+    .desc {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 </style>

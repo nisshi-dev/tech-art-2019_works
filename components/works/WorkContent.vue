@@ -10,7 +10,11 @@
           <img src="~/static/works/robot_village.jpg" />
         </li>
 
-        <MyModal v-if="modal" @close="closeModal">
+        <MyModal v-if="modal" @close="closeModal" :works-info="worksInfo[0]">
+          <!--
+          <template slot="modal-title">
+            <h3>ロボット村</h3>
+          </template>-->
           <!--
           <p>Vue.js Modal Window!</p>
           <div><input v-model="message" /></div>
@@ -73,10 +77,24 @@ export default {
     MyModal
   },
   data() {
-    return {
+    const data = {
       modal: false,
-      message: ''
+      worksInfo: [
+        {
+          title: 'ロボット村',
+          subtitle: 'ースマートフォンで実社会づくりー',
+          movie: '~/static/works/robot_village.webm',
+          desc: '3Dプリンタで制作したロボット計6台を制作し、展示を行った。'
+        },
+        {
+          title: 'KOUSHI HOUSE',
+          subtitle: 'ースマートフォンで実社会づくりー',
+          movie: '~/static/works/KOUSHI_HOUSE.webm'
+        }
+      ]
     }
+
+    return data
   },
   methods: {
     openModal() {
