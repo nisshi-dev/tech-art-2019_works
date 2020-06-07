@@ -18,12 +18,13 @@
             </video>
             <p>{{ worksInfo.movie }}</p>
             -->
-              <video controls width="600">
+              <!--<video controls width="600">
                 <source
                   src="~/static/works/robot_village.webm"
                   type="video/webm"
                 />
-              </video>
+              </video>-->
+              <slot />
             </div>
             <div class="desc">
               <h4>説明</h4>
@@ -42,11 +43,17 @@
           <div class="gallery">
             <h3>＜ギャラリー＞</h3>
             <div class="w-img">
+              <slot name="w-img"></slot>
+              <!--
               <img src="~/static/works/robot_village.jpg" />
               <img src="~/static/works/robot_village2.jpg" />
+              -->
             </div>
             <div class="h-img">
+              <slot name="h-img"></slot>
+              <!--
               <img src="~/static/works/robot_village_poster.jpg" />
+              -->
             </div>
           </div>
         </div>

@@ -4,13 +4,23 @@
     <h2>作品集</h2>
     <div class="content">
       <ul>
-        <li class="robot-village w-img" @click="openModal">
+        <li class="robot-village w-img" @click="openModal0">
           <h3>ロボット村</h3>
           <h4>ースマートフォンで実社会づくりー</h4>
           <img src="~/static/works/robot_village.jpg" />
         </li>
 
-        <MyModal v-if="modal" :works-info="worksInfo[0]" @close="closeModal">
+        <MyModal v-if="modal0" :works-info="worksInfo[0]" @close="closeModal0">
+          <video controls width="600">
+            <source src="~/static/works/robot_village.webm" type="video/webm" />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/robot_village.jpg" />
+            <img src="~/static/works/robot_village2.jpg" />
+          </template>
+          <template v-slot:h-img>
+            <img src="~/static/works/robot_village_poster.jpg" />
+          </template>
           <!--
           <template slot="modal-title">
             <h3>ロボット村</h3>
@@ -24,13 +34,24 @@
           -->
         </MyModal>
 
-        <li class="koushi-house w-img" @click="openModal">
+        <li class="koushi-house w-img" @click="openModal1">
           <h3>KOUSHI HOUSE</h3>
           <h4>―親子―</h4>
           <img src="~/static/works/KOUSHI_HOUSE.jpg" />
         </li>
 
-        <MyModal v-if="modal" :works-info="worksInfo[1]" @close="closeModal">
+        <MyModal v-if="modal1" :works-info="worksInfo[1]" @close="closeModal1">
+          <video controls width="600">
+            <source
+              src="~/static/works/KOUSHI_HOUSE.webm"
+              type="video/webm"
+              poster="~/static/works/KOUSHI_HOUSE.jpg"
+            />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/KOUSHI_HOUSE.jpg" />
+            <img src="~/static/works/KOUSHI_HOUSE2.jpg" />
+          </template>
         </MyModal>
 
         <br />
@@ -82,7 +103,8 @@ export default {
   },
   data() {
     const data = {
-      modal: false,
+      modal0: false,
+      modal1: false,
       worksInfo: [
         {
           title: 'ロボット村',
@@ -115,11 +137,17 @@ export default {
     return data
   },
   methods: {
-    openModal() {
-      this.modal = true
+    openModal0() {
+      this.modal0 = true
     },
-    closeModal() {
-      this.modal = false
+    closeModal0() {
+      this.modal0 = false
+    },
+    openModal1() {
+      this.modal1 = true
+    },
+    closeModal1() {
+      this.modal1 = false
     }
   }
 }
