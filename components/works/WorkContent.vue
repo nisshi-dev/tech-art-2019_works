@@ -71,16 +71,28 @@
           </template>
         </MyModal>
 
-        <li class="lucky-chance w-img">
+        <li class="lucky-chance w-img" @click="openModal3">
           <h3>ラッキーチャンス！！</h3>
           <h4>―ITの神様のお告げ―</h4>
           <img src="~/static/works/lucky_chance.jpg" />
         </li>
-        <li class="sound-fish h-img">
+
+        <MyModal v-if="modal3" :works-info="worksInfo[3]" @close="closeModal3">
+          <video controls width="600">
+            <source src="~/static/works/lucky_chance.webm" type="video/webm" />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/lucky_chance.jpg" />
+            <img src="~/static/works/lucky_chance2.jpg" />
+          </template>
+        </MyModal>
+
+        <li class="sound-fish h-img" @click="openModal4">
           <h3>音の水槽</h3>
           <h4>―運動方程式に従い散らばる魚たち―</h4>
           <img src="~/static/works/sound_fish.jpg" />
         </li>
+
         <li class="small-nature h-img">
           <h3>小さな自然</h3>
           <h4>―ささえあう癒し―</h4>
@@ -117,6 +129,8 @@ export default {
       modal0: false,
       modal1: false,
       modal2: false,
+      modal3: false,
+      modal4: false,
       worksInfo: [
         {
           title: 'ロボット村',
@@ -151,6 +165,16 @@ export default {
             'LEDテープを格子状に貼りめぐらせることで美しい光の立体を実現した。'
           ],
           producer: '　　    升谷光貴'
+        },
+        {
+          title: 'ラッキーチャンス！！',
+          subtitle: '―ITの神様のお告げ―',
+          movie: '~/static/works/lucky_chance.webm',
+          desc: [
+            'ボタンを押すとおみくじを引ける。',
+            '一本だけ光ったライトがあなたの運勢だよ！'
+          ],
+          producer: '　　    吉村龍、吉廣耕大、古賀祐輝'
         }
       ]
     }
@@ -175,6 +199,18 @@ export default {
     },
     closeModal2() {
       this.modal2 = false
+    },
+    openModal3() {
+      this.modal3 = true
+    },
+    closeModal3() {
+      this.modal3 = false
+    },
+    openModal4() {
+      this.modal4 = true
+    },
+    closeModal4() {
+      this.modal4 = false
     }
   }
 }
