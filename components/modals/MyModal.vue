@@ -132,6 +132,8 @@ export default {
     flex-direction: column; // 縦に整列
     justify-content: center;
     align-items: center; // 水平中央揃え
+    padding-bottom: 10px;
+    border-bottom: 3px solid indianred;
   }
   .content {
     display: flex;
