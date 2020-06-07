@@ -4,11 +4,24 @@
     <h2>作品集</h2>
     <div class="content">
       <ul>
-        <li class="robot-village w-img">
+        <li class="robot-village w-img" @click="openModal">
           <h3>ロボット村</h3>
           <h4>ースマートフォンで実社会づくりー</h4>
           <img src="~/static/works/robot_village.jpg" />
         </li>
+
+        <MyModal v-if="modal" @close="closeModal">
+          <!-- default スロットコンテンツ -->
+          <p>Vue.js Modal Window!</p>
+          <div><input v-model="message" /></div>
+          <!-- /default -->
+          <!-- footer スロットコンテンツ -->
+          <template slot="footer">
+            <button @click="doSend">送信</button>
+          </template>
+          <!-- /footer -->
+        </MyModal>
+
         <li class="koushi-house w-img">
           <h3>KOUSHI HOUSE</h3>
           <h4>―親子―</h4>
@@ -52,11 +65,28 @@
 
 <script>
 import BreadCrumb from '~/components/works/BreadCrumb.vue'
+// import CustomComponentModal from '@/components/modals/CustomComponentModal.vue'
+import MyModal from '~/components/modals/MyModal.vue'
 
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
-    BreadCrumb
+    BreadCrumb,
+    MyModal
+  },
+  data() {
+    return {
+      modal: false,
+      message: ''
+    }
+  },
+  methods: {
+    openModal() {
+      this.modal = true
+    },
+    closeModal() {
+      this.modal = false
+    }
   }
 }
 </script>
