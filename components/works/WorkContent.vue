@@ -93,6 +93,18 @@
           <img src="~/static/works/sound_fish.jpg" />
         </li>
 
+        <MyModal v-if="modal4" :works-info="worksInfo[4]" @close="closeModal4">
+          <video controls width="300">
+            <source src="~/static/works/sound_fish.webm" type="video/webm" />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/sound_fish2.jpg" />
+          </template>
+          <template v-slot:h-img>
+            <img src="~/static/works/sound_fish.jpg" />
+          </template>
+        </MyModal>
+
         <li class="small-nature h-img">
           <h3>小さな自然</h3>
           <h4>―ささえあう癒し―</h4>
@@ -173,6 +185,15 @@ export default {
           desc: [
             'ボタンを押すとおみくじを引ける。',
             '一本だけ光ったライトがあなたの運勢だよ！'
+          ],
+          producer: '　　    吉村龍、吉廣耕大、古賀祐輝'
+        },
+        {
+          title: '音の水槽',
+          subtitle: '―運動方程式に従い散らばる魚たち―',
+          movie: '~/static/works/sound_fish.webm',
+          desc: [
+            'キーボードの音に反応してプロジェクションマッピングの出力が変わるよ！'
           ],
           producer: '　　    吉村龍、吉廣耕大、古賀祐輝'
         }
