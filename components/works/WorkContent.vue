@@ -11,15 +11,13 @@
         </li>
 
         <MyModal v-if="modal" @close="closeModal">
-          <!-- default スロットコンテンツ -->
+          <!--
           <p>Vue.js Modal Window!</p>
           <div><input v-model="message" /></div>
-          <!-- /default -->
-          <!-- footer スロットコンテンツ -->
           <template slot="footer">
             <button @click="doSend">送信</button>
           </template>
-          <!-- /footer -->
+          -->
         </MyModal>
 
         <li class="koushi-house w-img">

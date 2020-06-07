@@ -2,6 +2,10 @@
   <transition name="modal" appear>
     <div class="modal modal-overlay" @click.self="$emit('close')">
       <div class="modal-window">
+        <div class="modal-header">
+          <p>×</p>
+        </div>
+        <!--
         <div class="modal-content">
           <slot />
         </div>
@@ -10,6 +14,7 @@
             <button @click="$emit('close')">Close</button>
           </slot>
         </footer>
+        -->
       </div>
     </div>
   </transition>
@@ -27,23 +32,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
   }
 
   &-window {
     background: #fff;
-    border-radius: 4px;
+    border-radius: 10px;
     overflow: hidden;
-  }
-
-  &-content {
-    padding: 10px 20px;
-  }
-
-  &-footer {
-    background: #ccc;
-    padding: 10px;
-    text-align: right;
   }
 }
 
@@ -70,6 +65,27 @@
   .modal-window {
     opacity: 0;
     transform: translateY(-20px);
+  }
+}
+
+.modal-window {
+  //border: 5px solid red;
+  width: 70%;
+  height: 60%;
+}
+
+.modal-header {
+  //border: 1px solid black;
+  //color: black;
+  display: flex;
+  align-self: flex-start; // 左寄せ
+  font-size: 30px;
+  font-weight: bold;
+  p {
+    //border: 1px solid black;
+    padding: 5px 10px;
+    background-color: #222222;
+    color: white;
   }
 }
 </style>
