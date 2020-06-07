@@ -139,11 +139,23 @@
           </template>
         </MyModal>
 
-        <li class="kamehame h-img">
+        <li class="kamehame h-img" @click="openModal7">
           <h3>カメハメ波</h3>
           <h4>―叫んでみよう！―</h4>
           <img src="~/static/works/kamehame.jpg" />
         </li>
+
+        <MyModal v-if="modal7" :works-info="worksInfo[7]" @close="closeModal7">
+          <video controls width="600">
+            <source src="~/static/works/kamehame.webm" type="video/webm" />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/kamehame2.jpg" />
+          </template>
+          <template v-slot:h-img>
+            <img src="~/static/works/kamehame.jpg" />
+          </template>
+        </MyModal>
       </ul>
     </div>
   </div>
@@ -169,6 +181,7 @@ export default {
       modal4: false,
       modal5: false,
       modal6: false,
+      modal7: false,
       worksInfo: [
         {
           title: 'ロボット村',
@@ -229,6 +242,12 @@ export default {
           subtitle: '―輝かしい時代―',
           desc: ['令和が光る！'],
           producer: '　　    猪井稀絵、長尾端稀'
+        },
+        {
+          title: 'カメハメ波',
+          subtitle: '―叫んでみよう！―',
+          desc: ['叫んでみよう！'],
+          producer: '　　    Hua Zhudi'
         }
       ]
     }
@@ -277,6 +296,12 @@ export default {
     },
     closeModal6() {
       this.modal6 = false
+    },
+    openModal7() {
+      this.modal7 = true
+    },
+    closeModal7() {
+      this.modal7 = false
     }
   }
 }
