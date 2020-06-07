@@ -123,11 +123,22 @@
           </template>
         </MyModal>
 
-        <li class="r h-img">
+        <li class="r h-img" @click="openModal6">
           <h3>R</h3>
           <h4>―輝かしい時代―</h4>
           <img src="~/static/works/R.jpg" />
         </li>
+
+        <MyModal v-if="modal6" :works-info="worksInfo[6]" @close="closeModal6">
+          <img src="~/static/works/R.jpg" width="300" />
+          <template v-slot:w-img>
+            <img src="~/static/works/R2.jpg" />
+          </template>
+          <template v-slot:h-img>
+            <img src="~/static/works/R.jpg" />
+          </template>
+        </MyModal>
+
         <li class="kamehame h-img">
           <h3>カメハメ波</h3>
           <h4>―叫んでみよう！―</h4>
@@ -157,11 +168,11 @@ export default {
       modal3: false,
       modal4: false,
       modal5: false,
+      modal6: false,
       worksInfo: [
         {
           title: 'ロボット村',
           subtitle: 'ースマートフォンで実社会づくりー',
-          movie: '~/static/works/robot_village.webm',
           desc: [
             '3Dプリンタでロボットを計6台制作し、展示を行った。',
             '一部のロボットはスマートフォンでQRコードを読み取ることでロボットの操作体験ができるようにした。',
@@ -172,7 +183,6 @@ export default {
         {
           title: 'KOUSHI HOUSE',
           subtitle: '―親子―',
-          movie: '~/static/works/KOUSHI_HOUSE.webm',
           desc: [
             'フィトンチッド。',
             'それは樹木が発散する化学物質であり人間に癒やしや安らぎを与える。',
@@ -186,7 +196,6 @@ export default {
         {
           title: '光る立体',
           subtitle: '―卓上の星団―',
-          movie: '~/static/works/light_cube.webm',
           desc: [
             'LEDテープを格子状に貼りめぐらせることで美しい光の立体を実現した。'
           ],
@@ -195,7 +204,6 @@ export default {
         {
           title: 'ラッキーチャンス！！',
           subtitle: '―ITの神様のお告げ―',
-          movie: '~/static/works/lucky_chance.webm',
           desc: [
             'ボタンを押すとおみくじを引ける。',
             '一本だけ光ったライトがあなたの運勢だよ！'
@@ -205,7 +213,6 @@ export default {
         {
           title: '音の水槽',
           subtitle: '―運動方程式に従い散らばる魚たち―',
-          movie: '~/static/works/sound_fish.webm',
           desc: [
             'キーボードの音に反応してプロジェクションマッピングの出力が変わるよ！'
           ],
@@ -214,9 +221,14 @@ export default {
         {
           title: '小さな自然',
           subtitle: '―ささえあう癒し―',
-          movie: '~/static/works/small_nature.webm',
           desc: ['水をかけると光るよ！'],
           producer: '　　    堀川裕気'
+        },
+        {
+          title: 'R',
+          subtitle: '―輝かしい時代―',
+          desc: ['令和が光る！'],
+          producer: '　　    猪井稀絵、長尾端稀'
         }
       ]
     }
@@ -259,6 +271,12 @@ export default {
     },
     closeModal5() {
       this.modal5 = false
+    },
+    openModal6() {
+      this.modal6 = true
+    },
+    closeModal6() {
+      this.modal6 = false
     }
   }
 }
