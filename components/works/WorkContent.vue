@@ -105,11 +105,24 @@
           </template>
         </MyModal>
 
-        <li class="small-nature h-img">
+        <li class="small-nature h-img" @click="openModal5">
           <h3>小さな自然</h3>
           <h4>―ささえあう癒し―</h4>
           <img src="~/static/works/small_nature.jpg" />
         </li>
+
+        <MyModal v-if="modal5" :works-info="worksInfo[5]" @close="closeModal5">
+          <video controls width="300">
+            <source src="~/static/works/small_nature.webm" type="video/webm" />
+          </video>
+          <template v-slot:w-img>
+            <img src="~/static/works/small_nature2.jpg" />
+          </template>
+          <template v-slot:h-img>
+            <img src="~/static/works/small_nature.jpg" />
+          </template>
+        </MyModal>
+
         <li class="r h-img">
           <h3>R</h3>
           <h4>―輝かしい時代―</h4>
@@ -143,6 +156,7 @@ export default {
       modal2: false,
       modal3: false,
       modal4: false,
+      modal5: false,
       worksInfo: [
         {
           title: 'ロボット村',
@@ -196,6 +210,13 @@ export default {
             'キーボードの音に反応してプロジェクションマッピングの出力が変わるよ！'
           ],
           producer: '　　    吉村龍、吉廣耕大、古賀祐輝'
+        },
+        {
+          title: '小さな自然',
+          subtitle: '―ささえあう癒し―',
+          movie: '~/static/works/small_nature.webm',
+          desc: ['水をかけると光るよ！'],
+          producer: '　　    堀川裕気'
         }
       ]
     }
@@ -232,6 +253,12 @@ export default {
     },
     closeModal4() {
       this.modal4 = false
+    },
+    openModal5() {
+      this.modal5 = true
+    },
+    closeModal5() {
+      this.modal5 = false
     }
   }
 }
