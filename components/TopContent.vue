@@ -30,7 +30,7 @@
   position: relative; // 相対配置
   //margin: 0.8rem;
   padding: 0.8rem;
-  border: 1px solid white;
+  //border: 1px solid white;
 }
 
 .content img {
