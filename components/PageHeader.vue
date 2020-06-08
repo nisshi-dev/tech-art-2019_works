@@ -32,7 +32,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   display: flex; // flexboxの指定
-  border: 1px solid white;
+  //border: 1px solid white;
   height: 12vh; // headerの高さを指定
   width: auto;
   //flex-wrap: wrap;
@@ -41,7 +41,7 @@ export default {
 
 .pageTitle {
   color: white;
-  border: 1px solid white;
+  //border: 1px solid white;
   margin-right: auto; // 次の要素を右寄せ
   height: 4vh;
   margin-top: 1vh;
@@ -54,7 +54,7 @@ export default {
 .yamaguchi {
   //margin-top: 0;
   //margin-left: auto;
-  border: 1px solid white;
+  //border: 1px solid white;
   height: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +101,7 @@ export default {
 
 .header-menu {
   color: gray;
-  border: 1px solid white;
+  //border: 1px solid white;
   //height: 4vh;
   margin-right: 80px;
   margin-top: auto; // 下寄せ
@@ -112,7 +112,7 @@ export default {
     //margin-right: 10vw;
   }
   .header-navlink {
-    border: solid white;
+    //border: solid white;
     padding: 0.4rem 1.2rem;
     color: white;
     margin-left: 1rem;
