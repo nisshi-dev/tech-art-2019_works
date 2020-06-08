@@ -118,8 +118,14 @@ export default {
     margin-left: 1rem;
     margin-right: 1rem;
   }
-  .header-navlink {
+  .header-navlink :link {
     color: white;
+    text-decoration: none;
+  }
+
+  .header-navlink :visited {
+    color: white;
+    text-decoration: none;
   }
 }
 
