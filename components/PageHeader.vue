@@ -40,7 +40,7 @@ export default {
 }
 
 .pageTitle {
-  color: gray;
+  color: white;
   border: 1px solid white;
   margin-right: auto; // 次の要素を右寄せ
   height: 4vh;
