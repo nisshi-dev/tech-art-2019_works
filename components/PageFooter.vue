@@ -99,7 +99,7 @@
 }
 
 .share {
-  border: 1px solid white;
+  //border: 1px solid white;
   width: calc(100% / 3);
   padding-left: 0.5vw;
   .code img {
