@@ -61,7 +61,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin-bottom: auto; // 上寄せ
-  margin-right: -310px;
+  margin-right: -400px;
   //margin-left: auto;
   //margin-left: 5vw;
   .yama-logo {
@@ -103,7 +103,7 @@ export default {
   color: gray;
   border: 1px solid white;
   //height: 4vh;
-  margin-right: 10px;
+  margin-right: 80px;
   margin-top: auto; // 下寄せ
   ul {
     display: flex; // listを横並びにする
