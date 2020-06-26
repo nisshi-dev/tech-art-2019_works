@@ -350,7 +350,9 @@ export default {
     align-items: center; // 水平中央揃え
     margin: 20px;
     border-radius: 20px; // 角を丸める
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
+    //box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(145deg, #1f1f2a, #242432);
+    box-shadow: 14px 14px 28px #0e0e13, -14px -14px 28px #36364b;
     img {
       margin-top: 10px;
       border-radius: 20px; // 角を丸める
