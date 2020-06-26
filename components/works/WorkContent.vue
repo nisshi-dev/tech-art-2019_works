@@ -353,6 +353,10 @@ export default {
     //box-shadow: 0 3px 5px rgba(255, 255, 255, 0.3);
     background: linear-gradient(145deg, #1f1f2a, #242432);
     box-shadow: 14px 14px 28px #0e0e13, -14px -14px 28px #36364b;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
     img {
       margin-top: 10px;
       border-radius: 20px; // 角を丸める
@@ -366,6 +370,15 @@ export default {
   li :visited {
     color: white;
     text-decoration: none;
+  }
+
+  li:hover,
+  li:focus,
+  li:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   }
 }
 </style>
