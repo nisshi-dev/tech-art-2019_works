@@ -61,7 +61,7 @@ export default {
   align-items: center;
   justify-content: center;
   margin-bottom: auto; // 上寄せ
-  margin-right: -400px;
+  margin-right: -380px;
   //margin-left: auto;
   //margin-left: 5vw;
   .yama-logo {
