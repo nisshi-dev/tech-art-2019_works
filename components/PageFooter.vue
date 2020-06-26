@@ -85,14 +85,14 @@
 
 .credit {
   //border: 1px solid white;
-  border-right: 1px solid white;
+  //border-right: 1px solid white;
   width: calc(100% / 3);
   padding-right: 0.5vw;
 }
 
 .presedted {
   //border: 1px solid white;
-  border-right: 1px solid white;
+  //border-right: 1px solid white;
   width: calc(100% / 3);
   padding-right: 0.5vw;
   padding-left: 0.5vw;
@@ -210,7 +210,7 @@
 
 .copyright {
   //border: 1px solid white;
-  border-top: 1px solid white;
+  //border-top: 1px solid white;
   width: 100%;
   display: flex; // 親要素とする
   justify-content: center; // 水平中央揃え
