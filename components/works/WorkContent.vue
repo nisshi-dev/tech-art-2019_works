@@ -56,7 +56,7 @@
 
         <br />
         <li class="light-cube w-img" @click="openModal2">
-          <h3>光る立体</h3>
+          <h3>SPARKLE CUBE</h3>
           <h4>―卓上の星団―</h4>
           <img src="~/static/works/light_cube.jpg" />
         </li>
