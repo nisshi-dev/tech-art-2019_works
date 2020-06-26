@@ -31,11 +31,24 @@
   //margin: 0.8rem;
   padding: 0.8rem;
   //border: 1px solid white;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 
 .content img {
   opacity: 0.3;
   width: 70%;
+}
+
+.content:hover,
+.content:focus,
+.content:active {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 .content p {
