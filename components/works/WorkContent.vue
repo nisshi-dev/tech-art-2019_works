@@ -347,24 +347,35 @@ export default {
 }
 
 .w-img img {
-  height: 35vh;
-  width: 28vw;
+  //height: 35vh;
+  width: 500px;
+  height: 281px;
+  @media screen and (max-width: 650px) {
+    width: 350px;
+    //height: 281px;
+  }
 }
 
 .h-img img {
-  width: 15vw;
-  height: 50vh;
+  //width: 15vw;
+  //height: 50vh;
+  height: 500px;
+  width: 250px;
+  @media screen and (max-width: 650px) {
+    width: 350px;
+    height: 500px;
+  }
 }
 
 .content {
   //border: 1px solid white;
-  width: 70vw;
+  width: 72%;
   ul {
     display: flex; // listを横並びにする
     list-style-type: none; // リストの接頭部を削除
     padding-left: 0;
     //align-items: center; // 水平中央揃え
-    justify-content: center; // 水平中央揃え
+    justify-content: center; // 均等に並べる
     flex-wrap: wrap; // 折返し有効
   }
   li {
@@ -381,6 +392,9 @@ export default {
     transform: perspective(1px) translateZ(0);
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    h3 {
+      margin-top: 5px;
+    }
     img {
       margin-top: 10px;
       border-radius: 20px; // 角を丸める

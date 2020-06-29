@@ -180,6 +180,9 @@ export default {
       li {
         list-style-type: none; // リストの接頭部を削除
       }
+      img {
+        width: 500px;
+      }
     }
   }
   .gallery {
