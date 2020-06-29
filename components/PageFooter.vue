@@ -63,6 +63,9 @@
   //border: 1px solid white;
   color: #dddddd;
   padding: 1rem;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
   h4 {
     font-size: 14px;
     line-height: 30px;
@@ -81,6 +84,9 @@
   //border-right: 1px solid white;
   width: calc(100% / 3);
   padding-right: 0.5vw;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .presedted {
@@ -89,12 +95,18 @@
   width: calc(100% / 3);
   padding-right: 0.5vw;
   padding-left: 0.5vw;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
 }
 
 .share {
   //border: 1px solid white;
   width: calc(100% / 3);
   padding-left: 0.5vw;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
   .code img {
     margin: 0.5rem;
   }
