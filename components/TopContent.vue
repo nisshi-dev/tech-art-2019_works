@@ -43,7 +43,7 @@
   //border: 1px solid white;
   background: center no-repeat url('../static/works.png');
   background-size: 90% 90%;
-  opacity: 0.65;
+  opacity: 0.5;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   -webkit-transition-duration: 0.5s;
@@ -81,10 +81,16 @@
   text-decoration: none;
   //line-height: 36px;
   font-size: 24px;
+  @media screen and (max-width: 480px) {
+    font-size: 16px;
+  }
 }
 
 .big-letter {
   font-size: 30px;
+  @media screen and (max-width: 480px) {
+    font-size: 24px;
+  }
 }
 
 .content-txt:visited,
