@@ -3,13 +3,20 @@
     <nuxt-link to="/works" class="content">
       <img src="~/static/works.png" />
       <p>
-        山口大学工学部講義「ものづくり創成プロジェクト」が、<br />
-        宇部市と山口大学及び宇部工業高等専門学校の共同企画する講座<br />
-        「TECHNOLOGY×ARTチャレンジ講座2019」の受講成果として、
-        計8作品制作した。<br />
-        この次世代創成人材育成に共感する宇部市企業の方々の支えにより、<br />
-        同市のイルミネーションフェスティバル<br />
-        「TOKIWAファンタジア2019」にて出展を行った。<br /><br />
+        宇部市・山口大学・宇部工業高等専門学校が共創する<br />
+        <b
+          >地域SDGsクリエイティブ人材育成プロジェクト「TECHNOLOGY×ART」チャレンジ講座</b
+        ><br />
+        <span class="mgr-10">時代を駆け抜けるクリエーターらが</span
+        ><span class="mgr-10">次世代に熱く伝えた</span>概念の卵<br /><br />
+        <span class="mgr-10">その成果プラットフォーム</span
+        >宇部市<b>「TOKIWAファンタジア」</b>で<br />
+        <span class="mgr-10">2019年度受講生らが</span
+        ><span class="mgr-10">感謝を込めて</span
+        >8つのイルミネーション作品を産み出しました<br />
+        市民の皆様に提起した<br />
+        <b>" IT × 感性 ≃ 冬暉の輝き ∞ "</b><br />
+        への出発です<br />
       </p>
     </nuxt-link>
   </div>
@@ -63,5 +70,9 @@
   color: #dddddd;
   font-size: 1.2vw;
   line-height: 2.5vw;
+}
+
+.mgr-10 {
+  margin-right: 14px;
 }
 </style>
