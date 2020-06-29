@@ -15,7 +15,7 @@
             <source src="~/static/works/robot_village.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
-            <img src="~/static/works/robot_village.jpg" />
+            <img src="~/static/works/robot_village3.jpg" />
             <img src="~/static/works/robot_village2.jpg" />
           </template>
           <template v-slot:h-img>
@@ -49,7 +49,6 @@
             />
           </video>
           <template v-slot:w-img>
-            <img src="~/static/works/KOUSHI_HOUSE.jpg" />
             <img src="~/static/works/KOUSHI_HOUSE2.jpg" />
           </template>
         </MyModal>
@@ -66,7 +65,7 @@
             <source src="~/static/works/light_cube.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
-            <img src="~/static/works/light_cube.jpg" />
+            <img src="~/static/works/light_cube3.jpg" />
             <img src="~/static/works/light_cube2.jpg" />
           </template>
         </MyModal>
@@ -154,6 +153,10 @@
           </template>
           <template v-slot:h-img>
             <img src="~/static/works/kamehame.jpg" />
+            <img src="~/static/works/kamehame3.jpg" />
+            <img src="~/static/works/kamehame4.jpg" />
+            <img src="~/static/works/kamehame5.jpg" />
+            <img src="~/static/works/kamehame6.jpg" />
           </template>
         </MyModal>
       </ul>
@@ -187,22 +190,26 @@ export default {
           title: 'ロボット村',
           subtitle: 'ースマートフォンで実社会づくりー',
           desc: [
-            '3Dプリンタでロボットを計6台制作し、展示を行った。',
-            '一部のロボットはスマートフォンでQRコードを読み取ることでロボットの操作体験ができるようにした。',
-            'また、上部にプロジェクターを設置し、簡単なプロジェクションマッピングを行った。'
+            '3Dプリンタでロボットを計6台制作し、コミュニケーションづくりをロボットを介し、子どもたちが遊びながら学ぶ、未来への提案。',
+            '利用者のスマートフォンでQRコードを読み取り動きを操作できるようにした。',
+            'インターネットの仮想空間を飛び出して、実空間でお互いに影響を与え合いながら、社会をつくっていく。',
+            'ロボットを操作する自分が、社会でどう振る舞えばよいのか',
+            '客観的に考察できるようになるかもしれない。',
+            '遠隔操作も可能なので、コロナ渦オンライン時代への予測的提案となった。',
+            '制御ボードを自作した。開催中のトラブルもオンライン操作で解決できた。',
+            'プロジェクターで簡単なプロジェクションマッピングを組み合わせた。'
           ],
-          producer: '　　    西田吉克、升谷光貴、一氏良仁、小川拓馬、富田大喜'
+          producer:
+            '　　    西田吉克、升谷光貴、一氏良仁、小川拓馬、岩本潤季、富田大喜'
         },
         {
           title: 'KOUSHI HOUSE',
           subtitle: '―親子―',
           desc: [
-            'フィトンチッド。',
-            'それは樹木が発散する化学物質であり人間に癒やしや安らぎを与える。',
-            'この作品は、廃材である木材を使っており、それをフレームにし不規則に並べて積み重ねたものがベースになっている。',
-            'そのフレームは幅が広いので子供も乗れ、階段状になるように設計した。',
-            'また防水性のLEDテープを貼り付け、制御することにより視覚的な変化も取り入れた。',
-            'また天井にはネットを覆わせるとともにライトを巻き付け星空を想起させる。'
+            '　大小2対となすこの作品は、親子を表す。',
+            '親から子が生まれ、それぞれ同じもの、似ているものを持つ。ここでいうと木板で作られた格子柄の壁だ。しかし感情は様々で何故かひとつのものから生まれたものなのにリズムも色も異なる。光の色の変化はときの流れの感情を表しているのだ。',
+            '　大きなオブジェには入ることができ、不透明な幕や紐が貼られている。まだ小さいオブジェにはないこれらは経験である。またい時の間から外を見渡すことができる窓を設けることで、他のイルミネーションを"見る"という経験になるだろう。',
+            '　木は株式会社ウベモク様からの廃材を使い、木の面に光を当ててライトアップを楽しむという新しいイルミネーションを提案する。今日のプラスチック問題を解決するにあたり材料を木にした。'
           ],
           producer: '　　    山口端奈、Hua Zhudi'
         },
@@ -247,7 +254,8 @@ export default {
         {
           title: '小さな自然',
           subtitle: '―ささえあう癒し―',
-          desc: ['水をかけると光るよ！'],
+          desc: [''],
+          img: require('~/static/works/small_nature3.jpg'),
           producer: '　　    堀川裕気'
         },
         {
@@ -259,7 +267,10 @@ export default {
         {
           title: 'カメハメ波',
           subtitle: '―叫んでみよう！―',
-          desc: ['叫んでみよう！'],
+          desc: [
+            '子どもが簡単に楽しめるものを作りたい、というコンセプトで制作しました。',
+            '声に反応すると反応するようにしました。'
+          ],
           producer: '　　    Hua Zhudi'
         }
       ]

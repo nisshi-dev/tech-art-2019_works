@@ -33,6 +33,7 @@
                 <li v-for="item in worksInfo.desc" :key="item">
                   <p>{{ item }}</p>
                 </li>
+                <img :src="worksInfo.img" />
               </ul>
               <br />
               <h4>製作者</h4>
