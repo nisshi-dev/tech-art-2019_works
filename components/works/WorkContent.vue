@@ -250,7 +250,8 @@ export default {
         {
           title: '小さな自然',
           subtitle: '―ささえあう癒し―',
-          desc: ['水をかけると光るよ！'],
+          desc: [''],
+          img: require('~/static/works/small_nature3.jpg'),
           producer: '　　    堀川裕気'
         },
         {
