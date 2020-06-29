@@ -153,6 +153,10 @@
           </template>
           <template v-slot:h-img>
             <img src="~/static/works/kamehame.jpg" />
+            <img src="~/static/works/kamehame3.jpg" />
+            <img src="~/static/works/kamehame4.jpg" />
+            <img src="~/static/works/kamehame5.jpg" />
+            <img src="~/static/works/kamehame6.jpg" />
           </template>
         </MyModal>
       </ul>
@@ -263,7 +267,10 @@ export default {
         {
           title: 'カメハメ波',
           subtitle: '―叫んでみよう！―',
-          desc: ['叫んでみよう！'],
+          desc: [
+            '子どもが簡単に楽しめるものを作りたい、というコンセプトで制作しました。',
+            '声に反応すると反応するようにしました。'
+          ],
           producer: '　　    Hua Zhudi'
         }
       ]
