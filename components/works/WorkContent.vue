@@ -65,7 +65,7 @@
             <source src="~/static/works/light_cube.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
-            <img src="~/static/works/light_cube.jpg" />
+            <img src="~/static/works/light_cube3.jpg" />
             <img src="~/static/works/light_cube2.jpg" />
           </template>
         </MyModal>
