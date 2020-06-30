@@ -129,7 +129,7 @@ export default {
 
 .modal-window {
   //border: 5px solid red;
-  width: 70%;
+  width: 80%;
   height: 80%;
   overflow-y: scroll; // モーダルウィンドウをスクロールできるようにした
 }
@@ -159,8 +159,12 @@ export default {
     flex-direction: column; // 縦に整列
     justify-content: center;
     align-items: center; // 水平中央揃え
+    flex-wrap: wrap;
     padding-bottom: 10px;
     border-bottom: 3px solid indianred;
+    @media screen and (max-width: 550px) {
+      font-size: 0.8rem;
+    }
   }
   .content {
     display: flex;
@@ -169,6 +173,11 @@ export default {
     border-bottom: 1px solid gray;
     padding-bottom: 20px;
     margin: 20px;
+    @media screen and (max-width: 1350px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
     .video {
       //height: 40vh;
       //width: 30vw;
@@ -177,6 +186,11 @@ export default {
     .desc {
       display: flex;
       flex-direction: column;
+      //border: 1px solid black;
+      width: 38vw;
+      @media screen and (max-width: 1350px) {
+        width: 70vw;
+      }
       li {
         list-style-type: none; // リストの接頭部を削除
       }
@@ -191,12 +205,13 @@ export default {
     //border: 1px solid black;
     justify-content: center;
     align-items: center; // 水平中央揃え
+    align-self: center;
     h3 {
       margin-bottom: 20px;
     }
     img {
       border-radius: 10px;
-      margin: 10px;
+      margin: 30px;
     }
     .w-img img {
       height: 35vh;

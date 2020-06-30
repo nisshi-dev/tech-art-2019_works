@@ -11,7 +11,7 @@
         </li>
 
         <MyModal v-if="modal0" :works-info="worksInfo[0]" @close="closeModal0">
-          <video controls width="600">
+          <video controls class="w-video">
             <source src="~/static/works/robot_village.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
@@ -41,7 +41,7 @@
         </li>
 
         <MyModal v-if="modal1" :works-info="worksInfo[1]" @close="closeModal1">
-          <video controls width="600">
+          <video controls class="w-video">
             <source
               src="~/static/works/KOUSHI_HOUSE.webm"
               type="video/webm"
@@ -61,7 +61,7 @@
         </li>
 
         <MyModal v-if="modal2" :works-info="worksInfo[2]" @close="closeModal2">
-          <video controls width="600">
+          <video controls class="w-video">
             <source src="~/static/works/light_cube.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
@@ -77,7 +77,7 @@
         </li>
 
         <MyModal v-if="modal3" :works-info="worksInfo[3]" @close="closeModal3">
-          <video controls width="600">
+          <video controls class="w-video">
             <source src="~/static/works/lucky_chance.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
@@ -93,7 +93,7 @@
         </li>
 
         <MyModal v-if="modal4" :works-info="worksInfo[4]" @close="closeModal4">
-          <video controls width="300">
+          <video controls class="h-video">
             <source src="~/static/works/sound_fish.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
@@ -111,7 +111,7 @@
         </li>
 
         <MyModal v-if="modal5" :works-info="worksInfo[5]" @close="closeModal5">
-          <video controls width="300">
+          <video controls class="h-video">
             <source src="~/static/works/small_nature.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
@@ -145,7 +145,7 @@
         </li>
 
         <MyModal v-if="modal7" :works-info="worksInfo[7]" @close="closeModal7">
-          <video controls width="600">
+          <video controls class="w-video">
             <source src="~/static/works/kamehame.webm" type="video/webm" />
           </video>
           <template v-slot:w-img>
@@ -337,6 +337,7 @@ export default {
   color: white;
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center; // 水平中央揃え
   flex-direction: column; // 縦に整列
   h2 {
@@ -346,10 +347,35 @@ export default {
   }
 }
 
+.w-video {
+  width: 35vw;
+  @media screen and (max-width: 1350px) {
+    height: 45vh;
+    width: auto;
+  }
+  @media screen and (max-width: 1000px) {
+    height: 30vh;
+    width: auto;
+  }
+  @media screen and (max-width: 700px) {
+    height: 20vh;
+    width: auto;
+  }
+}
+
+.h-video {
+  height: 60vh;
+  @media screen and (max-width: 1350px) {
+    height: 45vh;
+    width: auto;
+  }
+}
+
 .w-img img {
   //height: 35vh;
   width: 500px;
   height: 281px;
+  margin: 15px;
   @media screen and (max-width: 650px) {
     width: 350px;
     //height: 281px;
@@ -361,6 +387,7 @@ export default {
   //height: 50vh;
   height: 500px;
   width: 250px;
+  margin: 15px;
   @media screen and (max-width: 650px) {
     width: 350px;
     height: 500px;
