@@ -45,7 +45,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('Technology×Art2019 作品集'),
+      title: 'Technology×Art2019 作品集',
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
