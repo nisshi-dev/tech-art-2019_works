@@ -37,6 +37,18 @@ export default {
   width: auto;
   //flex-wrap: wrap;
   //justify-content: center;
+  @media screen and (max-width: 650px) {
+    //border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    //align-self: center;
+    height: auto;
+    width: 100%;
+    //width: 200px;
+    //margin: auto;
+  }
 }
 
 .pageTitle {
@@ -49,6 +61,14 @@ export default {
   //justify-content: center;
   //margin-top: auto;
   //align-items: center;
+  @media screen and (max-width: 650px) {
+    //border: 1px solid white;
+    margin: 1vw;
+    display: flex;
+    justify-content: center;
+    //width: 100%;
+    //margin: 0;
+  }
 }
 
 .yamaguchi {
@@ -64,6 +84,14 @@ export default {
   margin-right: -380px;
   //margin-left: auto;
   //margin-left: 5vw;
+  @media screen and (max-width: 650px) {
+    //border: 1px solid white;
+    width: 100%;
+    //margin-top: 6vh;
+    //margin-right: 10px;
+    //width: 200px;
+    //margin: auto;
+  }
   .yama-logo {
     display: flex;
     flex-direction: row;
@@ -105,6 +133,14 @@ export default {
   //height: 4vh;
   margin-right: 80px;
   margin-top: auto; // 下寄せ
+  @media screen and (max-width: 650px) {
+    //border: 1px solid white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    //width: 200px;
+    //margin: auto;
+  }
   ul {
     display: flex; // listを横並びにする
     list-style-type: none; // リストの接頭部を削除
@@ -117,6 +153,9 @@ export default {
     color: white;
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  .header-navlink:hover {
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
   }
   .header-navlink :link {
     color: white;
