@@ -45,7 +45,7 @@ export default {
   },
   head() {
     return {
-      title: this.$t('Technology×Art2019作品集'),
+      title: this.$t('Technology×Art2019 作品集'),
       __dangerouslyDisableSanitizers: ['script'],
       script: [
         {
@@ -56,7 +56,7 @@ export default {
                 "@type": "WebPage",
                 "@id": "https://tech-art-2019-works.netlify.app/"
             },
-            "headline": "Technology×Art2019作品集",
+            "headline": "Technology×Art2019 作品集",
             "datePublished": "2020-06-30 00:00:00+0900",
             "dateModified": "2020-06-30 00:00:00+0900",
             "author": {
