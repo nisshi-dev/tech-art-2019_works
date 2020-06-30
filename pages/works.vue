@@ -38,6 +38,11 @@ export default {
     }
 
     return data
+  },
+  head() {
+    return {
+      title: 'Technology×Art2019 作品集'
+    }
   }
 }
 </script>
