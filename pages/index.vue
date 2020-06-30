@@ -42,6 +42,49 @@ export default {
     }
 
     return data
+  },
+  head() {
+    return {
+      title: this.$t('Technology×Art2019作品集'),
+      __dangerouslyDisableSanitizers: ['script'],
+      script: [
+        {
+          innerHTML: `{
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://tech-art-2019-works.netlify.app/"
+            },
+            "headline": "Technology×Art2019作品集",
+            "datePublished": "2020-06-30 00:00:00+0900",
+            "dateModified": "2020-06-30 00:00:00+0900",
+            "author": {
+                "@type": "Person",
+                "name": "西田吉克"
+            },
+            "description": "当サイトはTechnology×Art2019で制作した作品の情報を提供するために、Technology×Art2019の受講生が開設したものです。",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://tech-art-2019-works.netlify.app/works.png",
+                "width": 110,
+                "height": 31
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Technology×Art2019 チャレンジ講座",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://tech-art-2019-works.netlify.app/works.png",
+                    "width": 110,
+                    "height": 31
+                }
+            }
+          }`,
+          type: 'application/ld+json'
+        }
+      ]
+    }
   }
 }
 </script>
